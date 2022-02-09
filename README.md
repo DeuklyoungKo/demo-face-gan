@@ -8,12 +8,19 @@ The Streamlit app is [implemented in only 150 lines of Python](https://github.co
 ![In-use Animation](https://github.com/streamlit/demo-face-gan/blob/master/GAN-demo.gif?raw=true "In-use Animation")
 
 ## How to run this demo
+If you haven’t installed Streamlit yet, you can do so by running:
+```
+pip install streamlit
+streamlit hello
+```
+
+
 The demo requires Python 3.6 or 3.7 (The version of TensorFlow we specify in [requirements.txt](https://github.com/streamlit/demo-face-gan/blob/master/requirements.txt#L14) is not supported in Python 3.8+). **We suggest creating a new virtual environment**, then running:
 
 ```
 git clone https://github.com/streamlit/demo-face-gan.git
 cd demo-face-gan
-pip install -r requirements.txt
+pip install -r ./pg_gan/requirements-pip.txt
 streamlit run streamlit_app.py
 ```
 
@@ -24,3 +31,12 @@ Playing with the sliders, you _will_ find biases that exist in this model. For e
 ## Questions? Comments?
 
 Please ask in the [Streamlit community](https://discuss.streamlit.io) or [check out our article](https://towardsdatascience.com/build-an-app-to-synthesize-photorealistic-faces-using-tensorflow-and-streamlit-dd2545828021).
+
+
+## Addtion in my case
+1. use cuda v10.x  
+ref) https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=rhrkdfus&logNo=221620755869
+2. use cuDNN v7.x  
+ref) https://deep-deep-deep.tistory.com/5
+3. use tensorflow v1.x  
+ref) https://www.tensorflow.org/install/pip
